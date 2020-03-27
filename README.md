@@ -72,13 +72,13 @@ Ambiente para estudo com Julia, Python e R em docker.
    
   *No Windows abrir o Docker Quickstart Terminal*
 
-### Parar um containers
+### Parar um container
          docker stop jupyter      
 
 ### Remover um container
          docker rm jupyter
 
-### Dados do containers
+### Dados do container
          docker container inspect jupyter
 
 ### Acessar log do container
