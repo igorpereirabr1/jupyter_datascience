@@ -32,7 +32,7 @@ Ambiente para estudo com Julia, Python e R em docker.
 ![dockertoolbox](dockertoolbox.jpg)
 
    * *Executar o arquivo virtualbox_config.bat*
-      <br><i>O arquivo bat altera a VM default para 2GB de memória, drive do repo compartilhado como /d e todas as portas necessárias mapeadas</i></br>
+      <br><i>O arquivo bat altera a VM default para 2GB de memória, adiciona o drive do repo compartilhado como /d e faz o mapeamento da porta 8888 para acesso local</i></br>
       ![bat](bat.jpg)
       <br><i>OBS: se o ser driver raiz for diferente de C:, altere o arquivo virutalbox_config.bat na parte indicada no comentário. A memória pode ser alterada também, basta editar o arquivo.</i></br>
 
