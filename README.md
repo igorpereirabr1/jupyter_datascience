@@ -15,7 +15,11 @@ Ambiente para estudo com Julia, Python e R em docker.
 #### Criação do diretório docker
    *  No Windows:
       *  Criar na raiz do seu drive o diretório docker
-         ex: C:\docker
+         ex: D:\docker
+          
+   * No Linux:
+      * Criar o diretório na home do usuário
+        ex: /home/user/docker
           
 #### Baixar o repo dentro diretório docker
           git clone https://github.com/fabiogjardim/jupyter_datascience.git
