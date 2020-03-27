@@ -15,7 +15,7 @@ Ambiente para estudo com Julia, Python e R em docker.
 #### Criação do diretório docker
    *  No Windows:
       *  Criar na raiz do seu drive o diretório docker
-         ex: D:\docker
+         ex: D:\docker ou C:\docker
           
    * No Linux:
       * Criar o diretório na home do usuário
@@ -33,6 +33,7 @@ Ambiente para estudo com Julia, Python e R em docker.
 
    * *Executar o arquivo virtualbox_config.bat*
       <br><i>O arquivo bat altera a VM default para 2GB de memória, drive do repo compartilhado como /d e todas as portas necessárias mapeadas</i></br>
+      ![bat](bat.jpg)
       <br><i>OBS: se o ser driver raiz for diferente de C:, altere o arquivo virutalbox_config.bat na parte indicada no comentário. A memória pode ser alterada também, basta editar o arquivo.</i></br>
 
    
@@ -42,7 +43,9 @@ Ambiente para estudo com Julia, Python e R em docker.
 
 ### Em um terminal, no diretorio jupyter_datascience, executar o docker run
 
-        docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes jupyter/datascience-notebook       
+        docker run --rm -p 8888:8888 --name jupyter -e JUPYTER_ENABLE_LAB=yes jupyter/datascience-notebook       
+
+![dockerrun](dockerrun.jpg)
 
   *Acesse o Jupyter pelo link indicado com a chave de acesso*
 
@@ -57,11 +60,27 @@ Ambiente para estudo com Julia, Python e R em docker.
 ### Em um terminal, no diretorio jupyter_datascience, executar o docker run
    *  No Windows:
 
-        docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v /d/docker/jupyter_datascience:/home/jovyan/work jupyter/datascience-notebook       
+        docker run --rm -p 8888:8888 --name jupyter -e JUPYTER_ENABLE_LAB=yes -v /d/docker/jupyter_datascience:/home/jovyan/work jupyter/datascience-notebook       
 
 *  No Linux:
         
         docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v "$PWD":/home/jovyan/work jupyter/datascience-notebook
+
+## SOLUCIONANDO PROBLEMAS 
+   
+  *No Windows abrir o Docker Quickstart Terminal*
+
+### Parar um containers
+         docker stop jupyter      
+
+### Remover um container
+         docker rm jupyter
+
+### Dados do containers
+         docker container inspect jupyter
+
+### Acessar log do container
+         docker container logs jupyter 
 
 ## Imagens   
 
