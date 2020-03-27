@@ -21,9 +21,7 @@ Ambiente para estudo com Julia, Python e R em docker.
 #### Baixar o repo dentro diretório docker
           git clone https://github.com/fabiogjardim/jupyter_datascience.git
 
-### No diretório jupyter_datascience vai existir os seguintes objetos
-![ls](ls.JPG)
-
+### No diretório jupyter_datascience
    *  No Windows:
 
       *Executar o arquivo virtualbox_config.bat*
@@ -38,6 +36,9 @@ Ambiente para estudo com Julia, Python e R em docker.
 
 ### Em um terminal, no diretorio jupyter_datascience, executar o docker run
           docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v "$PWD":/home/jovyan/work jupyter/datascience-notebook       
+
+![Inicialzação](login.jpg)
+<br><i>O link destacado é o endereço de acesso ao Jupyter Lab</i></br>
 
 ## Imagens   
 
