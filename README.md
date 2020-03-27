@@ -43,7 +43,7 @@ Ambiente para estudo com Julia, Python e R em docker.
 
 ### Em um terminal, no diretorio jupyter_datascience, executar o docker run
 
-        docker run --rm -p 8888:8888 --name jupyter -e JUPYTER_ENABLE_LAB=yes jupyter/datascience-notebook       
+    docker run --rm -p 8888:8888 --name jupyter -e JUPYTER_ENABLE_LAB=yes jupyter/datascience-notebook       
 
 ![dockerrun](dockerrun.jpg)
 
