@@ -41,6 +41,8 @@ Ambiente para estudo com Julia, Python e R em docker.
    
   *No Windows abrir o Docker Quickstart Terminal, do Linux um terminal*
 
+  *No modo sem pasta compartilhada, tudo que for salva no docker é perdido quando ele é reiniciado*
+
 ### Em um terminal, no diretorio jupyter_datascience, executar o docker run
 
     docker run --rm -p 8888:8888 --name jupyter -e JUPYTER_ENABLE_LAB=yes jupyter/datascience-notebook       
@@ -82,6 +84,8 @@ Ambiente para estudo com Julia, Python e R em docker.
 ### Acessar log do container
          docker container logs jupyter 
 
+  *OBS: Caso percam o link de acesso ao Jupyter, basta acessar o log para vizualizar novamente*
+  
 ## Imagens   
 
 [Docker Hub Original](https://hub.docker.com/r/jupyter/datascience-notebook)
