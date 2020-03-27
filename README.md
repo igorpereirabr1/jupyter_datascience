@@ -1,4 +1,3 @@
-
 # JUPYTER DATA SCIENCE
 
 Ambiente para estudo com Julia, Python e R em docker.
@@ -11,7 +10,7 @@ Ambiente para estudo com Julia, Python e R em docker.
    *  [Instalação do git](https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Instalando-o-Git)
 
 ## SETUP
-*OBS: Esse passo deve ser realizado apena uma vez. Após o ambiente criado, utilizar o docker-compose para iniciar os containers como mostrado no tópico INICIANDO O AMBIENTE*
+*OBS: Esse passo deve ser realizado apena uma vez. Após o ambiente criado, utilizar o docker run para iniciar os containers como mostrado no tópico INICIANDO O AMBIENTE*
 
 #### Criação do diretório docker
    *  No Windows:
@@ -21,16 +20,33 @@ Ambiente para estudo com Julia, Python e R em docker.
 #### Baixar o repo dentro diretório docker
           git clone https://github.com/fabiogjardim/jupyter_datascience.git
 
-### No diretório jupyter_datascience
-   *  No Windows:
+![gitclone](gitclone.jpg)
 
-      *Executar o arquivo virtualbox_config.bat*
-         <br><i>O arquivo bat altera a VM default para 2GB de memória, drive do repo compartilhado como /d e todas as portas necessárias mapeadas</i></br>
-         <br><i>OBS: se o ser driver raiz for diferente de C:, altere o arquivo virutalbox_config.bat na parte indicada no comentário</i></br>
+### Ajustes no Windows
+   * *Abrir o Docker Quickstart Terminal*
+   
+![dockertoolbox](dockertoolbox.jpg)
 
-   *  No Linux: *Não é necessário alterar nem executar nada*
+   * *Executar o arquivo virtualbox_config.bat*
+      <br><i>O arquivo bat altera a VM default para 2GB de memória, drive do repo compartilhado como /d e todas as portas necessárias mapeadas</i></br>
+      <br><i>OBS: se o ser driver raiz for diferente de C:, altere o arquivo virutalbox_config.bat na parte indicada no comentário. A memória pode ser alterada também, basta editar o arquivo.</i></br>
 
+   
 ## INICIANDO O AMBIENTE
+   
+  *No Windows abrir o Docker Quickstart Terminal, do Linux um terminal*
+
+### Em um terminal, no diretorio jupyter_datascience, executar o docker run
+
+        docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes jupyter/datascience-notebook       
+
+  *Acesse o Jupyter pelo link indicado com a chave de acesso*
+
+![Inicialzação](login.jpg)
+<br><i>O link destacado é o endereço de acesso ao Jupyter Lab</i></br>
+
+
+## INICIANDO O AMBIENTE COM PASTA COMPARTILHADA
    
   *No Windows abrir o Docker Quickstart Terminal, do Linux um terminal*
 
@@ -42,10 +58,6 @@ Ambiente para estudo com Julia, Python e R em docker.
 *  No Linux:
         
         docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v "$PWD":/home/jovyan/work jupyter/datascience-notebook
-
-
-![Inicialzação](login.jpg)
-<br><i>O link destacado é o endereço de acesso ao Jupyter Lab</i></br>
 
 ## Imagens   
 
