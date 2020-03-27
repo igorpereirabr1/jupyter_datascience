@@ -18,7 +18,7 @@ echo *****************************************
 echo **** CONFIGURANDO DISCOS COMPARTILHADOS
 echo *****************************************
 
-:: se a unidade de disco não for a C: altera para a unidade correta
+:: se a unidade de disco não for a C: alterar para a unidade correta
 :: altear apenas o "C:/" para "D:/"
 VBoxManage.exe sharedfolder add default --name "d" --hostpath "c:/" --automount
 VBoxManage.exe setextradata default VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root 1
@@ -28,6 +28,7 @@ echo
 echo *****************************************
 echo **** AUMENTANDO MEMORIA DA VM DEFAULT
 echo *****************************************
+:: definição de memoria. Caso queira alterar o atual que é 2GB
 VBoxManage.exe  modifyvm default --memory 2048
 
 
